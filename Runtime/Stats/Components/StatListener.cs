@@ -10,18 +10,18 @@ namespace FluffyGamedev.Stats.Components
         [SerializeField]
         private StatDescriptor m_WatchedStat;
         [SerializeField]
+        private StatsHolder m_WatchedStatHolder;
+        [SerializeField]
         private UnityEvent<float> m_Event;
-
-        private StatContainerInstance m_StatContainer = null;
 
         private void Start()
         {
-            //TODO
+            m_WatchedStatHolder.statContainer.GetStat(m_WatchedStat).onValueChanged += m_Event.Invoke;
         }
 
         private void OnDisable()
         {
-            //TODO
+            m_WatchedStatHolder.statContainer.GetStat(m_WatchedStat).onValueChanged -= m_Event.Invoke;
         }
     }
 }
