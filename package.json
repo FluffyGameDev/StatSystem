@@ -1,0 +1,19 @@
+{
+    "name": "com.fluffygamedev.stats",
+    "version": "0.1.0",
+    "displayName": "Fluffy's Stat System",
+    "description": "System that allows user to create and edit stats.",
+    "unity": "2021.3",
+    "unityRelease": "3f1",
+    "author": {
+        "name": "Fluffy GameDev",
+        "email": "fluffygamedev@gmail.com"
+    },
+    "samples": [
+        {
+            "displayName": "Stats Sample",
+            "description": "Contains a sample scene demonstrating the use of the stat system.",
+            "path": "Samples~/StatsSample"
+        }
+    ]
+}
