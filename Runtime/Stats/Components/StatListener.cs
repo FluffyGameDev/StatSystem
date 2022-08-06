@@ -16,7 +16,9 @@ namespace FluffyGamedev.Stats.Components
 
         private void Start()
         {
-            m_WatchedStatHolder.statContainer.GetStat(m_WatchedStat).onValueChanged += m_Event.Invoke;
+            StatInstance watchedStat = m_WatchedStatHolder.statContainer.GetStat(m_WatchedStat);
+            watchedStat.onValueChanged += m_Event.Invoke;
+            m_Event.Invoke(watchedStat.statValue);
         }
 
         private void OnDisable()
